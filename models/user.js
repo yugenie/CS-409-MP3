@@ -6,7 +6,7 @@ var UserSchema = new mongoose.Schema({
     // name: String
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    pendingTasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
+    pendingTasks: [{ type: String, ref: 'Task' }],
     dateCreated: { type: Date, default: Date.now },
 });
 
